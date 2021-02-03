@@ -8,14 +8,27 @@
 html {
   font-size: 10px;
 }
+
 body {
   width: 100%;
   height: 100vh;
   background-color: #e3e4e6;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+}
+body p {
+  position: absolute;
+  bottom: 2%;
+  color: #464648;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+body p a {
+  color: #464648;
 }
 .container {
   width: 25rem;
@@ -23,22 +36,54 @@ body {
   background-color: #f6f5fa;
   border: 3px solid #f6f5fa;
   border-radius: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
+  align-items: center;
   position: relative;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
   font-size: 2rem;
 }
+.display {
+  display: flex;
+}
+form {
+  margin-bottom: 3rem;
+  position: relative;
+}
+form input {
+  background-color: #f6f5fa;
+  border: 3px solid #f6f5fa;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  outline: none;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+form button {
+  display: none;
+}
+form .msg {
+  position: absolute;
+  left: -1.5rem;
+  width: 30rem;
+  top: -3rem;
+  font-size: 1.5rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+form input::placeholder {
+  font-size: 1.4rem;
+}
 .img {
   width: 27rem;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 13rem;
 }
 .img img {
   width: 7rem;
   height: auto;
-  position: absolute;
-  right: 9rem;
-  top: 12rem;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
@@ -47,10 +92,8 @@ body {
   font-weight: 500;
   letter-spacing: 0.3rem;
   color: #464648;
-  position: absolute;
-  left: 4.5rem;
-  top: 3rem;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
 }
 .info {
   position: absolute;
@@ -72,6 +115,18 @@ body {
   font-weight: 500;
 }
 .day {
+  font-size: 1.1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
+  max-width: 10rem;
+  overflow: hidden;
+  max-height: 1.5rem;
+  position: relative;
+}
+.day span {
+  position: absolute;
+  top: 0;
+  left: 2.9rem;
   font-size: 1.1rem;
   letter-spacing: 0.15rem;
   font-weight: 400;
