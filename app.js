@@ -9,7 +9,7 @@ const form = document.querySelector("form");
 const input = document.querySelector("input");
 const msg = document.querySelector(".msg");
 
-const apikey = config.SECRET_API_KEY;
+const apiKey = "d5e7bff776c9a108541f92a6bbc72089";
 
 //coords
 window.addEventListener("load", () => {
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
 
 
 
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=` + apikey + `&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
   fetch(url)
     .then(response => response.json())
@@ -108,7 +108,7 @@ form.addEventListener("submit", e => {
   }
 
   //ajax here
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=` + apikey + `&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
   fetch(url)
     .then(response => response.json())
